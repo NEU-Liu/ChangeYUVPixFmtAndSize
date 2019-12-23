@@ -1,0 +1,8 @@
+播放yuv:
+ffplay  -s 640x360  -pix_fmt yuv420p demo_640x360_yuv420p.yuv
+裁剪yuv(同时可以改变yuv的像素格式，但是注意:长和宽的相对大小[16:9 , 4:3]不能变,否则视频完全乱码):
+ffmpeg -pix_fmt yuv420p  -s 640x360 -i demo_640x360_yuv420p.yuv 
+-pix_fmt yuv420p -s 160:90 output.yuv
+
+
+
